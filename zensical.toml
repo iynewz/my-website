@@ -11,23 +11,23 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "iynewz"
+site_name = "iynewz's dev center"
 
 # The site_`description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "A new project generated from the default template project."
+site_description = "The world is my oyster 🦪"
 
 # The site_author attribute. This is used in the HTML head element.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_author
-site_author = "<your name here>"
+site_author = "iynewz"
 
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-#site_url = "https://www.example.com/"
+site_url = "https://iynewz.dev"
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
@@ -44,10 +44,17 @@ Copyright &copy; 2025 The authors
 # can be defined using TOML syntax.
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-# nav = [
-#   { "Get started" = "index.md" },
-#   { "Markdown in 5min" = "markdown.md" },
-# ]
+nav = [
+  {"Home" = "index.md"},
+  {"C++ Primer" = [
+     "c-plus-plus-primer/index.md",
+     "c-plus-plus-primer/7.md",
+     "c-plus-plus-primer/12.md",
+  ]},
+  {"CSAPP" = [
+     "csapp/index.md",
+  ]}
+]
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
@@ -73,7 +80,7 @@ Copyright &copy; 2025 The authors
 [project.theme]
 
 # change this to "classic" to use the traditional Material for MkDocs look.
-#variant = "classic"
+#variant = "modern"
 
 # Zensical allows you to override specific blocks, partials, or whole
 # templates as well as to define your own templates. To do this, uncomment
@@ -214,7 +221,7 @@ features = [
     # When tabs are enabled, top-level sections are rendered in a menu layer
     # below the header for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-tabs
-    #"navigation.tabs",
+    "navigation.tabs",
 
     # When sticky tabs are enabled, navigation tabs will lock below the header
     # and always remain visible when scrolling down.
