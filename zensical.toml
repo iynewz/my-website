@@ -50,6 +50,7 @@ nav = [
      "c-plus-plus-primer/index.md",
      "c-plus-plus-primer/7.md",
      "c-plus-plus-primer/12.md",
+     "c-plus-plus-primer/13.md",
   ]},
   {"CSAPP" = [
      "csapp/index.md",
