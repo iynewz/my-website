@@ -54,6 +54,9 @@ nav = [
   ]},
   {"CSAPP" = [
      "csapp/index.md",
+  ]},
+  {"LevelDB" = [
+     "level-db/index.md",
   ]}
 ]
 
