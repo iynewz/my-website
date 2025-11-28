@@ -17,7 +17,7 @@ site_name = "iynewz's dev center"
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "The world is my oyster 🦪"
+site_description = "不期待，不懈怠"
 
 # The site_author attribute. This is used in the HTML head element.
 #
@@ -34,7 +34,7 @@ site_url = "https://iynewz.dev"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2025 The authors
+Copyright &copy; 2025 iynewz
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
