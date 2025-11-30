@@ -37,6 +37,8 @@ copyright = """
 Copyright &copy; 2025 iynewz
 """
 
+extra_javascript = ["javascripts/extra.js"]
+
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply
 # derive the navigation structure from the directory structure of your
@@ -57,6 +59,9 @@ nav = [
   ]},
   {"LevelDB" = [
      "level-db/index.md",
+  ]},
+  {"Random Thoughts" = [
+     "random-thoughts/index.md",
   ]}
 ]
 
@@ -310,8 +315,9 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
-
-
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/iynewz"
+[[project.extra.social]]
+icon = "fontawesome/brands/zhihu"
+link = "https://www.zhihu.com/people/hu-hu-hu-88"
