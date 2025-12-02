@@ -321,3 +321,7 @@ link = "https://github.com/iynewz"
 [[project.extra.social]]
 icon = "fontawesome/brands/zhihu"
 link = "https://www.zhihu.com/people/hu-hu-hu-88"
+
+[project.extra.analytics]
+provider = "google"
+property = "${GA_MEASUREMENT_ID}"
