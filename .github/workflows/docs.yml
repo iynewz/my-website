@@ -21,10 +21,11 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install zensical
-      - name: Build Zensical site
+      - name: Inject GA ID
         run: |
-          export GA_MEASUREMENT_ID=${{ secrets.GA_MEASUREMENT_ID }}
-          zensical build --clean
+          sed -i "s|\${GA_MEASUREMENT_ID}|${{ secrets.GA_MEASUREMENT_ID }}|g" zensical.toml
+      - name: Build Zensical site
+        run: zensical build --clean
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
