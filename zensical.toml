@@ -63,6 +63,9 @@ nav = [
   {"LevelDB" = [
      "level-db/index.md",
   ]},
+  {"Blogs" = [
+     "blogs/uva1343-debug.md"
+  ]},
   {"Random Thoughts" = [
      "random-thoughts/index.md",
   ]}
