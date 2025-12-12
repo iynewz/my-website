@@ -48,20 +48,27 @@ quotes = []
 
 for item in items:
     fields = item.get("fields", {})
-    
+
+    # quote 是必需的
     quote_text = get_text_field(fields.get("quote"))
-    if not quote_text:  # 没有 quote 的记录就跳过
+    if not quote_text:
         continue
-    source_text = get_text_field(fields.get("source").get("text", ""))
-    author_text = get_text_field(fields.get("author"))
-    
+
+    # optional fields
+    source_field = fields.get("source")
+    source_text = get_text_field(source_field.get("text")) if source_field else ""
+
+    author_field = fields.get("author")
+    author_text = get_text_field(author_field) if author_field else ""
+
     quotes.append({
         "quote": quote_text,
         "source": source_text,
         "author": author_text
     })
 
-with open("site/quotes.json", "w", encoding="utf-8") as f:
+
+with open("docs/quotes.json", "w", encoding="utf-8") as f:
     json.dump(quotes, f, ensure_ascii=False, indent=2)
 
 print("quotes.json generated")
