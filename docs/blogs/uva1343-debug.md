@@ -1,3 +1,9 @@
+---
+tags:
+  - C++
+  - Debug
+---
+
 # UVa1343 Debug 笔记：百爪挠心就对拍
 
 **例题 7-12：旋转游戏 (The Rotation Game, [UVa1343](https://onlinejudge.org/external/13/1343.pdf))**
@@ -314,7 +320,7 @@ if (same > 0)
 
 ## 总结
 
-哎！虽然 bug 本身微小，但 debug 费了这么大一圈功夫。应该读题更仔细写。debug 的过程也算经验加加了：
+哎！虽然 bug 本身微小，但 debug 费了这么大一圈功夫。应该读题更仔细些。debug 的过程也算经验加加了：
 
 * 仔细读题（No moves needed 后还要输出中心数字）
 * switch case 一定要写 break
