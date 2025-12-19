@@ -5,7 +5,7 @@ on:
       - master
       - main
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 jobs:
@@ -19,14 +19,33 @@ jobs:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - run: pip install zensical
+          python-version: "3.x"
+      # Feishu + Zensical 依赖
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests python-dotenv zensical
+      # 同步 Feishu Quotes → docs/quotes.json
+      - name: Sync Feishu quotes
+        run: |
+          python scripts/fetch_quotes.py
+      - name: Commit quotes.json if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/quotes.json
+          git commit -m "chore: sync quotes from Feishu" || echo "No changes"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Inject GA ID
         run: |
           sed -i "s|\${GA_MEASUREMENT_ID}|${{ secrets.GA_MEASUREMENT_ID }}|g" zensical.toml
       - name: Build Zensical site
-        run: zensical build --clean
+        run: |
+          zensical build --clean
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
-      - uses: actions/deploy-pages@v4
+      - id: deployment
+        uses: actions/deploy-pages@v4
