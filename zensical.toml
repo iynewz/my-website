@@ -61,6 +61,7 @@ nav = [
      "csapp/10.md",
      "csapp/11.md",
      "csapp/11-server.md",
+     "csapp/12.md",
   ]},
   {"LevelDB" = [
      "level-db/index.md",
