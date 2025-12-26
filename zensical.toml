@@ -57,6 +57,7 @@ nav = [
   ]},
   {"CSAPP" = [
      "csapp/index.md",
+     "csapp/3.md",
      "csapp/8.md",
      "csapp/10.md",
      "csapp/11.md",
