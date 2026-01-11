@@ -69,6 +69,7 @@ nav = [
   {"OSTEP" = [
      "OSTEP/26-thread-intro.md",
      "OSTEP/homework-26.md",
+     "OSTEP/27-thread-api.md",
   ]},
   {"LevelDB" = [
      "level-db/index.md",

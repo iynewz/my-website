@@ -9,6 +9,7 @@ tags:
 # homework-26
 
 ## Readme
+
 在开始作业之前，一定要读官方仓库中的说明：https://github.com/remzi-arpacidusseau/ostep-homework/tree/master/threads-intro
 
 `x86.py` 是一个教学用的 x86-like CPU 模拟器，用于直观展示多线程程序在不同调度下的执行过程。为简化模型，`.text` 段从地址 1000 开始。
