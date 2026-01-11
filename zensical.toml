@@ -66,6 +66,9 @@ nav = [
      "csapp/11-server.md",
      "csapp/12.md",
   ]},
+  {"OSTEP" = [
+     "OSTEP/homework-26.md",
+  ]},
   {"LevelDB" = [
      "level-db/index.md",
   ]},
