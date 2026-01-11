@@ -67,6 +67,7 @@ nav = [
      "csapp/12.md",
   ]},
   {"OSTEP" = [
+     "OSTEP/26-thread-intro.md",
      "OSTEP/homework-26.md",
   ]},
   {"LevelDB" = [
