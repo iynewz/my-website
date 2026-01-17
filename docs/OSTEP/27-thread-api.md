@@ -28,6 +28,8 @@ int pthread_create(pthread_t *thread,
 
 深入理解 `void*`: 物理层面，第四个参数传递一个机器字长的位模式，比如 64 位系统，第四个参数就是传一个 64 位数。使用 `void*` 使得我们可以传入任意类型的参数（或返回任意类型的参数）。
 
+pthread_create 只保证线程被创建成功。什么时候开始执行新线程是操作系统调度器决定的。
+
 ## pthread_join()
 
 ```c
@@ -131,11 +133,13 @@ pthread_cond_wait() 做了三件事：
 
 1. 释放 mutex（这就是为什么第二个参数是一个 mutex）
    
-2. 把线程放入 cond 的等待队列，并进入睡眠 puts the calling thread to sleep, releases the lock。
+2. 把线程放入 cond 的等待队列，并进入睡眠。puts the calling thread to sleep, releases the lock。
    
 3. （被唤醒之后），重新获取 mutex。pthread_cond_wait 返回之前，线程一定已经重新拿到了 mutex
 
      > However, before returning after being woken, the `pthread_cond_wait()` re-acquires the lock, thus ensuring that any time the waiting thread is running between the lock acquire at the beginning of the wait sequence, and the lock release at the end, it holds the lock.
+
+这三件事情合并在一起是原子的。
 
 ### 如何协作？
 
