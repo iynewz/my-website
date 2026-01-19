@@ -5,7 +5,7 @@ tags:
   - Concurrency
 ---
 
-# homework-27
+# 27. Homework
 
 [README](https://github.com/remzi-arpacidusseau/ostep-homework/blob/master/threads-api/README.md)
 

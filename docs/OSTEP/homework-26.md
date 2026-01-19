@@ -6,7 +6,7 @@ tags:
   - Concurrency
 ---
 
-# homework-26
+# 26. Homework
 
 ## Readme
 
