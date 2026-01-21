@@ -349,7 +349,7 @@ Fetch-And-Add 是 28.11 介绍的原子操作，正如其名，它的作用是�
 `./x86.py -t 3 -p ticket.s -M ticket,count  -c -a bx=100,bx=100,bx=100`
 
 ## Question 13
-TODO
+yield.s 里假设有一个叫做 yield 的操作指令。如果没有获取到锁，不再想之前一样自旋，二十把 CPU 交    
 
 ## Question 14
 TODO

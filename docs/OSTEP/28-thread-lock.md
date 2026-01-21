@@ -148,4 +148,92 @@ void unlock(lock_t *lock) {
 
 Ticket lock 使用原子 FetchAndAdd 分配唯一票号，线程按票号顺序自旋等待 turn，解锁时递增 turn，从而实现公平的自旋锁。
 
-### yield
+### run-and-yield
+
+这个方法的思想是，如一个线程在获取锁的时候发现锁被其他线程抢占，与其自旋，不如把 CPU 的控制权交出去。假设 100 个线程，有一个线程一直占锁，其他 99 个线程都 run-and-yield, 这会带来巨大的 context switch 的开销（虽然比纯自旋带来的开销小一点）。
+
+run-and-yield 把自旋成本换成了调度成本。更糟糕的是如果调度器策略不公平，某个线程不停地 yield, 最终会饿死（无法向前推进）。
+
+（这也是为什么 OS 要提供接下来介绍的阻塞原语，让失败线程直接睡眠，不再参与调度）。
+
+### Using Queues
+
+之前的方法，要么是让线程自旋，要么是让线程立即 yield。如果操作系统的调度策略不够好，都可能会带来巨大开销和饿死的问题。所以我们需要操作系统的帮助，也需要维护一个队列，知道哪些 thread 正在等待获取锁。
+
+Solaris 是一个像 linux 一样独立的 OS，Solaris 是最早将 park/ unpark 这种机制广泛应用于线程同步的操作系统。
+
+park()：阻塞当前线程，让它挂起，直到被其他线程唤醒或操作系统中断。
+
+unpark(thread)：唤醒被 park 阻塞的线程。
+
+只要线程不在就绪队列里，CPU 就不会运行它。
+
+```c
+typedef struct __lock_t {
+    int flag;      // 0: free, 1: held
+    int guard;     // spinlock to protect this structure
+    queue_t *q;    // waiting threads
+} lock_t;
+
+void lock(lock_t *m) {
+    while (TestAndSet(&m->guard, 1) == 1)
+        ; //acquire guard lock by spinning
+    if (m->flag == 0) { 
+        m->flag = 1; // 锁空闲的情况，拿到锁
+        m->guard = 0;
+    } else { // 锁被占用的情况
+        queue_add(m->q, gettid()); // 把自己加入等待队列
+        m->guard = 0;
+        park();
+    }
+}
+
+void unlock(lock_t *m) {
+    while (TestAndSet(&m->guard, 1) == 1)
+        ; // spin
+    if (queue_empty(m->q)) {
+        m->flag = 0; // 没人等，直接释放锁
+    } else { 
+        // 有人等，唤醒一个
+        int tid = queue_remove(m->q);
+        unpark(tid);
+        // 注意：flag 仍然是 1，锁的“所有权”被直接转交
+    }
+
+    m->guard = 0;
+}
+```
+
+（回忆一下，TestAndSet 返回的是旧值，返回 0 说明成功拿到了 guard; 返回 1 说明 guard 原来就被别人拿着。）
+
+guard 是一个「保护锁的锁」，用来保护锁的两个原数据： flag（锁是否被占用） 和 queue （拿不到锁的等待线程）。每把锁有自己独立的 guard.
+
+获取 guard 的部分仍然是自旋的。这个方法没有完全的避免自旋，但已经把 spin 压缩到了一个更小的范围。
+
+如果当前 thread 没有拿到 flag 锁，做三件事：
+
+```c
+queue_add(m->q, gettid()) // 1. 把自己加入等待队列
+m->guard = 0; // 2. 设置 guard 为 0
+park(); // 3. 睡眠
+```
+
+注意 2 和 3 这俩顺序不能反。原因是？Park 让线程睡眠。如果线程 1 先 park 了，它在睡眠时仍然持有 guard, 那其他的想拿同一把锁的线程 2 就永远拿不到 guard 了。（但是如果线程3 想拿其他锁，还是不影响的）
+
+**wakeup race**
+
+仍然有个问题：比如线程 1 已经将自己加入 wait 的队列了，但是还没有完成 park()，如果这时候发生中断，另一个线程 unlock()，从等待队列里取出了线程 1，那么线程 1 继续执行的是 park(), 就长眠不醒了！
+
+也就是说 guard 无法保护好 park 这种线程状态转换的东西。
+
+（park 实际发生了什么？用户态 → 内核态？内核还有一个 queue）
+
+Solaris 的做法是在 park 之前再加一个 「我马上要 park」的 setpark() 系统调用。
+
+还有一种做法是把 guard 传进内核，让锁变成原子的，就不会出现 race condition 了。
+
+### priority inversion & spinlock
+
+自旋锁和优先级组合在一起，会永远自旋的例子：
+
+高优先级线程一旦自旋了，低优先级、持锁线程永远挤出 CPU。
