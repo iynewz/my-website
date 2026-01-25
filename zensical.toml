@@ -74,6 +74,7 @@ nav = [
      "OSTEP/28-thread-lock.md",
      "OSTEP/homework-28.md",
      "OSTEP/32-concurrency-bugs.md",
+     "OSTEP/33-event-based-concurrency.md",
   ]},
   {"LevelDB" = [
      "level-db/index.md",
