@@ -349,7 +349,35 @@ Fetch-And-Add 是 28.11 介绍的原子操作，正如其名，它的作用是�
 `./x86.py -t 3 -p ticket.s -M ticket,count  -c -a bx=100,bx=100,bx=100`
 
 ## Question 13
-yield.s 里假设有一个叫做 yield 的操作指令。如果没有获取到锁，不再想之前一样自旋，二十把 CPU 交    
+
+yield.s 里假设有一个叫做 yield 的指令。如果没有获取到锁，test-and-set 会自旋，但 yield 不会。到底省了多少条指令要看被阻塞的 Thread 自旋了多久吧。
+
+为了看到输出的指令数，我用管道把输出的内容放到一个文件里比较：
+
+```bash
+./x86.py -t 2 -p test-and-set.s -M mutex,count -c -a bx=100,bx=100 > out-test-and-set.txt
+./x86.py -t 2 -p yield.s -M mutex,count -c -a bx=100,bx=100 > out-yield.txt
+```
+
+可以看到，test-and-set 的自旋是稳定出现的：![alt text](image-5.png)
+
+上面的 command 输出的结果，行数差是 1000 左右。
 
 ## Question 14
-TODO
+
+test-and-test-and-set 干了什么？
+
+它先用普通读反复 test 锁，只有当锁「看起来」空闲时，才使用原子操作 xchg 去真正抢锁。
+
+```c
+while (true) {
+    while (lock != 0) {
+        ; // 普通读，自旋
+    }
+    if (atomic_xchg(lock, 1) == 0) {
+        break; // 成功拿锁
+    }
+}
+```
+
+相比 TAS, TTAS 不用每一次都执行原子指令。自旋仍然是要自旋的，TTAS 让自旋分为普通读锁和原子读锁，如果全是普通读，最终可能出现多个线程同时进入临界区或者一直抢不到锁。如果全是原子读锁，在上一道题里也能看到弊端。TTAS 感觉比较折中。
