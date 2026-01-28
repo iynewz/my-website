@@ -67,6 +67,8 @@ nav = [
      "csapp/12.md",
   ]},
   {"OSTEP" = [
+     "OSTEP/04-process-intro.md",
+     "OSTEP/05-process-api.md",
      "OSTEP/26-thread-intro.md",
      "OSTEP/homework-26.md",
      "OSTEP/27-thread-api.md",
