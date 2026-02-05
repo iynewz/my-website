@@ -82,8 +82,9 @@ nav = [
      "level-db/index.md",
   ]},
   {"Blogs" = [
-     "blogs/uva1343-debug.md",
-     "blogs/self-awareness.md"
+     "blogs/uva11882.md",
+     "blogs/uva1343.md",
+     "blogs/self-awareness.md",
   ]},
   {"Random Thoughts" = [
      "random-thoughts/index.md",
