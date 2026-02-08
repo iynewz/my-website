@@ -247,7 +247,7 @@ n = 8000, time = 0.000592625 s
 
 - 使用对数纵轴。如果不写 `plt.yscale("log")`, 默认就是线性坐标。因为 `O(n³)` 纵轴太大了，会把其他曲线压扁。对数纵轴，曲线的斜率怎么看呢？ x 每 +1，y 乘 10^k。在对数纵轴，看的是横向走同样的 Δx，纵向跨了几个数量级
 
-- `run.sh` 开头的 `!/bin/bash` 这一行叫 shebang，它告诉操作系统：这个文件要用哪个解释器（bash，python3 等）来执行。在执行之前，先 `chmod +x` 赋予执行权限。
+- `run.sh` 开头的 `#!/bin/bash` 这一行叫 shebang，它告诉操作系统：这个文件要用哪个解释器（bash，python3 等）来执行。在执行之前，先 `chmod +x` 赋予执行权限。
 
 - 在安装 matplotlib 的时候遇到报错 `“× This environment is externally managed”`。意思是这个 Python 是 Homebrew 在管的，我不能直接往里 pip install。推荐工作流：每个项目创建独立的虚拟环境，在环境中用 pip 安装所需包。
 
