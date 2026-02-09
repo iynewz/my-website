@@ -69,6 +69,7 @@ nav = [
   {"OSTEP" = [
      "OSTEP/04-process-intro.md",
      "OSTEP/05-process-api.md",
+     "OSTEP/08-multi-level-feedback-queue.md",
      "OSTEP/26-thread-intro.md",
      "OSTEP/homework-26.md",
      "OSTEP/27-thread-api.md",
