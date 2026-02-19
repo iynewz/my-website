@@ -5,7 +5,7 @@ tags:
   - Concurrency
 ---
 
-# 8. Scheduling: Introduction
+# 07. Scheduling: Introduction
 
 ## Scheduling Metrics
 

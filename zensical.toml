@@ -71,6 +71,8 @@ nav = [
      "OSTEP/05-process-api.md",
      "OSTEP/07-scheduling-introduction.md",
      "OSTEP/08-multi-level-feedback-queue.md",
+     "OSTEP/09-scheduling-proportional-share.md",
+     "OSTEP/10-multiprocessor-scheduling.md",
      "OSTEP/26-thread-intro.md",
      "OSTEP/homework-26.md",
      "OSTEP/27-thread-api.md",
