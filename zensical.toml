@@ -34,7 +34,7 @@ site_url = "https://iynewz.dev"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2025 iynewz
+Copyright &copy; 2026 iynewz
 """
 
 extra_javascript = ["javascripts/extra.js"]
