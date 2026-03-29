@@ -86,6 +86,8 @@ nav = [
      "level-db/index.md",
   ]},
   {"Blogs" = [
+     "blogs/how-to-make-growth.md",
+     "blogs/ai-thinking.md",
      "blogs/maximum-subarray-problem.md",
      "blogs/uva11882.md",
      "blogs/uva1343.md",
