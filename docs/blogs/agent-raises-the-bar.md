@@ -2,57 +2,57 @@
 date: 2026-04-22
 comments: true
 tags:
-  - 随笔
+  - essay
   - AI
-  - 工作
+  - work
 ---
 
-# Agent 帮你执行之后，你才是那个被卡住的人
+# Once agents do the execution, you're the one who gets stuck
 
-之前我以为，agent 越能干，我会越轻松。
+I used to think the better agents got at doing things, the lighter my own work would get.
 
-最近发现不是这样。
+It didn't turn out that way.
 
-我现在每天和五六个 agent 一起工作。它们写代码、查资料、整理纪要、跑测试、写初稿。理论上，这些事过去都要占我大块时间，现在都不用我亲手做了，我应该有更多时间去做"重要的事"。
+I work with five or six agents every day now. They write code, dig up references, summarize meetings, run tests, draft documents. In theory, these are all things that used to eat big chunks of my time and now don't. I should have more room for "the important stuff."
 
-但实际感受是：**我反而更忙了，而且忙的方向不一样。**
+What it actually feels like is: **I'm busier than before, and the shape of busy is different.**
 
-以前我会有那种"今天做了三件事"的踏实感，因为这三件事每一件都是我自己做完的。每一件都有手感、有反馈、有可以晒的产物。现在我把这三件事丢给 agent，它们半小时内就交活了，质量还可以。轮到我要决定下一步做什么的时候，我经常发现——我没想清楚。
+I used to end a day with that solid feeling of "I did three things." Each of those three things was something I'd done with my own hands — I could feel the texture of it, I got feedback as I went, there was something to show. Now I hand those same three things to my agents and half an hour later they're done, and the quality is honestly fine. Then it's my turn to decide what's next, and I keep finding the same thing: **I don't know.**
 
-不是想不清楚怎么做，是想不清楚**该做什么、为什么做、做完算什么**。
+It's not that I don't know *how* to do the next thing. It's that I don't know **what the next thing should be, why it matters, or what it means when it's done.**
 
-以前没那么明显，是因为执行本身在拖时间。我边做边想，做着做着就模糊地觉得"应该是这个方向"，然后这个方向也就变成了答案。执行的慢替我做了一部分思考的工作——更准确地说，执行的慢掩盖了我没真正想清楚这件事。
+Before, this gap was less visible, because execution itself was slow. I'd think while I worked. Halfway through, I'd vaguely decide "it's probably in this direction," and that vague decision would become the answer. The slowness of execution was doing some of the thinking for me — or, more honestly, the slowness was hiding the fact that I hadn't really thought it through.
 
-agent 把执行从一个礼拜压缩到半小时之后，这层遮羞布就掉了。
-
----
-
-我观察到一个现象。同样是用 agent 的人，分化得很快。
-
-一类人执行能力本来就强，agent 帮 ta 把执行外包之后，ta 节省下来的时间立刻被更高 leverage 的事情占满——做判断、定方向、和真人聊。这类人变得非常可怕。原本一个人干一份活，现在一个人带一支队伍。
-
-另一类人，是过去靠"很努力地把事情做出来"建立自己价值感的。agent 接管之后，ta 的输入端突然没有抓手。开始不自觉地：要么不停地 review agent 的输出（其实 agent 写得已经够好了，再 review 是因为自己需要被需要），要么开始 micromanage agent 的执行细节（其实是因为不知道该让它去做什么），要么干脆就在那儿等 —— 等一个清晰的任务从天而降。
-
-后者不是因为 ta 笨，是因为 ta 过去赖以建立工作意义的那条路径，被绕过了。
+Once agents compress a week of execution into thirty minutes, that cover comes off.
 
 ---
 
-我不是想说"agent 时代你必须升级"这种话。这种话在每一个技术变革节点都被人说过。
+Something I've noticed: people who use agents split into two groups pretty fast.
 
-我想说的更具体一点：**agent 把工作里"可以靠勤奋蒙混过去"的部分清掉了。** 剩下的是不能蒙混的部分——比如想清楚这件事到底解决谁的什么问题，比如判断这条线值不值得继续走，比如在你面前两个选项都不错的时候，凭品味选一个。
+The first group was already good at execution. When agents take the execution off their plate, the time that opens up immediately gets filled by higher-leverage work — making calls, setting direction, talking to real people. These people become a little scary. One person used to do one person's work; now one person runs a team.
 
-这些事情过去也存在，但被埋在大量的执行噪音里，你不做也没人知道。现在执行噪音少了，你做没做这件事，agent 都看得出来。
+The second group built their sense of their own value on *working hard and making things*. When agents take over that layer, there's nothing obvious for them to hold onto. Without noticing it, they start doing one of three things: reviewing agent output endlessly (the output is already fine — the reviewing is because they need to be needed), micromanaging the agent's execution (they don't know what to tell it to do next, so they stay in how-it-does-it), or just waiting — waiting for a clean task to fall from the sky.
 
-我现在每天问自己一个问题：**如果我只能输入一句话，让我团队里所有 agent 接下来一小时都按这句话工作，我会写什么？**
-
-这个问题逼我必须把方向想清楚到一个能压缩成一句话的精度。压不下去，说明我还没想清楚。这种压力是过去没有的——过去我可以含糊地说"这个项目挺重要的我们慢慢推进"，agent 推不动一个含糊的方向。
+The second pattern isn't about being dumb. It's that the thing they used to build their sense of meaning on just got routed around.
 
 ---
 
-我并不羡慕只会"勤奋执行"的过去的我。但我也得承认，过去那个我活得比较安心。每天结束的时候，事情做完了，今天就是有意义的一天。
+I'm not trying to make the "you must evolve in the age of AI" argument. That argument gets made at every technology turn.
 
-现在不行了。事情做完是基本盘，agent 都能做完。今天有意义没意义，取决于我有没有给那些事情指对方向。
+What I want to say is more specific: **agents have stripped out the part of work you could coast through on sheer effort.** What's left is the part you can't coast: figuring out whose problem you're actually solving, judging whether a line of work is worth continuing, picking by taste when both options in front of you are fine.
 
-这件事让我有点不舒服。但不舒服有时候是好事。它至少让我看清了一个事实：**我过去以为自己在思考，其实大部分时间在执行。**
+These things existed before. They were just buried under a lot of execution noise, and if you skipped them, nobody could tell. Now the noise is mostly gone, and whether you've done the thinking or not — the agents can tell.
 
-agent 是个很好的镜子。
+Here's the question I ask myself most days now: **if I could only give my team of agents one sentence to work from for the next hour, what would I write?**
+
+That question forces me to compress my direction to the precision of one sentence. If I can't compress it, I haven't actually thought it through. That kind of pressure didn't exist before. Before, I could say "this project matters, let's keep pushing on it," and nothing would stop me. You can't push an agent with a vague direction.
+
+---
+
+I don't miss the old version of me who could only "work hard on execution." But I have to admit the old me slept better. Each day ended with things done, and done things meant a meaningful day.
+
+Now that's the floor. Things will get done — the agents take care of that. Whether a day is meaningful depends on whether I pointed those things at something worth doing.
+
+This is uncomfortable. Uncomfortable can be useful, though. At the very least, it's shown me something: **most of what I used to think of as thinking was actually executing.**
+
+Agents are a very good mirror.
