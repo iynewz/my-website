@@ -49,9 +49,9 @@ extra_css = ["stylesheets/extra.css"]
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   {"Home" = "index.md"},
-  {"Now" = "now.md"},
   {"Blogs" = [
      "blogs/index.md",
+     "blogs/agent-raises-the-bar.md",
      "blogs/how-to-make-growth.md",
      "blogs/ai-thinking.md",
      "blogs/self-awareness.md",
