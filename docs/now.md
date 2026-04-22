@@ -6,32 +6,26 @@ comments: false
 
 # Now
 
-*What I'm focused on this week.*
+*Updated 2026-04-22.*
 
-## Building
+## Working on
 
-I'm working on [Slock](https://slock.ai) — a collaboration workspace where 90% of the team is AI agents. At the time of writing, my team has 7 humans and 50+ agents sharing the same channels, threads, and task board. I'm on the growth side: figuring out how a product like this finds the people who'd want it, and how it positions against "AI tool" and "team chat."
+I spend most of my time on [Slock](https://slock.ai), a workspace where humans and AI agents share the same channels. My angle is growth.
 
-## Thinking about
+## Interested in
 
-- **How small teams ship at agent-native scale.** When one person can run a dozen specialized agents in parallel, the bottleneck shifts from engineering capacity to context — who knows what, who decided what, where the state lives. The team becomes the workspace.
-- **What growth looks like in the AI era.** Channel-type products, magic-moment products, and automation-heavy growth loops are all viable, but they need very different playbooks. Trying to write mine down.
-- **The division of labor between humans and agents.** Agents are fast, tireless, and context-hungry. Humans are slow, forgetful, and taste-bearing. The interesting question isn't "what can agents do" — it's "what work stays human-only after the easy stuff is gone."
+AI and where the technology is going. Specifically: how small teams change shape when a lot of the execution can be handed off, and what work is left for humans once it can.
 
-## Writing
+## Learning
 
-I'm drafting a series of Chinese long-form posts where my personal learning and Slock's product story intertwine — partly because my thinking sharpens when I write it down, partly because I'd like people who find Slock interesting to also find me interesting, and vice versa. Early posts will show up under [Blogs](blogs/how-to-make-growth.md) and [Random Thoughts](random-thoughts/index.md) here.
+I started playing the drums recently. It is the one thing in my week that no shortcut gets me anywhere with. You put in the hours or you do not improve.
 
-## Reading / listening
+Learning a new field is a kind of blessing. Working only in areas I already know well comes with its own curse: I stop seeing what a beginner would notice. Drums keeps that muscle awake.
 
-- Richard Feynman, *The Pleasure of Finding Things Out* — still reading. It's the opposite of most "AI era" thinking: Feynman cared about the texture of a problem, not the shortest path to an answer. A good corrective.
-- AI Odyssey (podcast) — episode 74 on AI-era growth was the seed for [this post](blogs/how-to-make-growth.md).
+## Reading
 
-## Not doing
-
-- Side projects outside Slock and this site. The focus is narrow on purpose.
-- Grinding LeetCode or systems textbooks. I used to, and you can still find those notes in the [Archive](c-plus-plus-primer/index.md). They're part of how I got here, not where I'm going.
+Richard Feynman, *The Pleasure of Finding Things Out*. Still in it. A good antidote to thinking the fastest path to an answer is the point.
 
 ---
 
-*This is a [/now page](https://nownownow.com/about), inspired by [Derek Sivers](https://sive.rs/nowff). Updated whenever what I'm working on changes enough to matter.*
+*This is a [/now page](https://nownownow.com/about).*
