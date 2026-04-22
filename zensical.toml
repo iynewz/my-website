@@ -49,19 +49,7 @@ extra_css = ["stylesheets/extra.css"]
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   {"Home" = "index.md"},
-  {"Blogs" = [
-     "blogs/index.md",
-     "blogs/agent-raises-the-bar.md",
-     "blogs/how-to-make-growth.md",
-     "blogs/ai-thinking.md",
-     "blogs/self-awareness.md",
-     "blogs/maximum-subarray-problem.md",
-     "blogs/uva11882.md",
-     "blogs/uva1343.md",
-  ]},
-  {"Random Thoughts" = [
-     "random-thoughts/index.md",
-  ]},
+  {"Blogs" = "blogs/index.md"},
   {"TIL" = [
      "today-i-learn/2603.md",
      "today-i-learn/2602.md",
@@ -362,6 +350,9 @@ toggle.name = "Switch to light mode"
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/iynewz"
+[[project.extra.social]]
+icon = "fontawesome/brands/x-twitter"
+link = "https://twitter.com/WendyWug"
 [[project.extra.social]]
 icon = "fontawesome/brands/zhihu"
 link = "https://www.zhihu.com/people/hu-hu-hu-88"
