@@ -174,11 +174,16 @@ body {
   color: var(--kami-olive);
 }
 
-/* UI chrome (header, nav) uses sans */
+/* UI chrome unified with body: everything uses serif, so the page
+   reads as one typographic voice instead of serif-body + sans-chrome mix.
+   Search input stays sans (it's an input element). */
 .md-header,
 .md-tabs,
 .md-nav,
-.md-footer,
+.md-footer {
+  font-family: var(--kami-serif);
+}
+
 .md-search__input,
 .md-search-result {
   font-family: var(--kami-sans);
@@ -222,8 +227,9 @@ body {
   color: var(--kami-olive);
   opacity: 1;
   font-weight: 500;
-  font-size: 0.82rem;
-  letter-spacing: 0.01em;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  font-family: var(--kami-serif);
 }
 .md-tabs__link:hover,
 .md-tabs__link--active {
@@ -280,16 +286,44 @@ body {
   padding-top: 1rem;
 }
 
-/* Date under H1 (existing override) */
+/* Breadcrumb / path — make it feel like part of the page, not a foreign widget.
+   Serif, ~0.82rem, subtle olive, tighter separator. */
+.md-path {
+  font-family: var(--kami-serif);
+  font-size: 0.85rem;
+  color: var(--kami-stone);
+  padding: 0.6rem 0 0.2rem;
+  margin-bottom: 0.2rem;
+  background: transparent;
+  border: none;
+}
+.md-path__list {
+  gap: 0.35rem;
+}
+.md-path__link {
+  color: var(--kami-stone);
+  opacity: 1;
+  font-weight: 400;
+  font-family: var(--kami-serif);
+}
+.md-path__link:hover {
+  color: var(--kami-brand);
+}
+.md-path__item {
+  color: var(--kami-stone);
+  font-family: var(--kami-serif);
+}
+
+/* Date under H1 (existing override) — serif now too, smaller, subtle */
 .page-date {
   color: var(--kami-stone);
-  font-family: var(--kami-sans);
-  font-size: 0.78em;
+  font-family: var(--kami-serif);
+  font-size: 0.85em;
   margin-top: -0.4em;
   margin-bottom: 2em;
   font-style: normal;
   opacity: 1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
 }
 
 /* ---- Blog index: H3 cards ---- */
@@ -317,26 +351,28 @@ body {
 
 .post-date {
   color: var(--kami-stone);
-  font-family: var(--kami-sans);
-  font-size: 0.7em;
-  font-weight: 500;
+  font-family: var(--kami-serif);
+  font-size: 0.75em;
+  font-weight: 400;
   margin-left: 0.5em;
   opacity: 1;
-  letter-spacing: 0.03em;
+  letter-spacing: 0;
   text-transform: none;
-  vertical-align: 0.15em;
+  vertical-align: 0.1em;
 }
 
-/* ---- Sidebar nav ---- */
+/* ---- Sidebar nav (serif, aligned with body) ---- */
 .md-nav {
-  font-size: 0.78rem;
+  font-size: 0.88rem;
+  font-family: var(--kami-serif);
 }
 .md-nav__title {
   color: var(--kami-olive);
   font-weight: 500;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  font-size: 0.7rem;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 0.88rem;
+  font-family: var(--kami-serif);
 }
 .md-nav__link {
   color: var(--kami-olive);
