@@ -24,8 +24,8 @@ I'm drafting a series of Chinese long-form posts where my personal learning and 
 
 ## Reading / listening
 
+- Richard Feynman, *The Pleasure of Finding Things Out* — still reading. It's the opposite of most "AI era" thinking: Feynman cared about the texture of a problem, not the shortest path to an answer. A good corrective.
 - AI Odyssey (podcast) — episode 74 on AI-era growth was the seed for [this post](blogs/how-to-make-growth.md).
-- *(more to come — I'll update as I go.)*
 
 ## Not doing
 
