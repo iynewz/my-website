@@ -7,52 +7,28 @@ tags:
   - work
 ---
 
-# Once agents do the execution, you're the one who gets stuck
+# Working with agents has changed the shape of my day
 
 I used to think the better agents got at doing things, the lighter my own work would get.
 
-It didn't turn out that way.
+What I've found is something different. I am not busier in the old sense, but the shape of my day has changed, and the new shape asks more of me, not less.
 
-I work with five or six agents every day now. They write code, dig up references, summarize meetings, run tests, draft documents. In theory, these are all things that used to eat big chunks of my time and now don't. I should have more room for "the important stuff."
+I work with five or six agents daily. They write code, dig up references, summarize meetings, run tests, draft documents. Each one responds fast and eagerly. Taken together, they produce a kind of constant forward motion. Tasks move. Cards close. Branches merge. It feels productive.
 
-What it actually feels like is: **I'm busier than before, and the shape of busy is different.**
+That feeling is where I have to be careful. Agents are so quick, and so willing, that they can produce an illusion of prosperity. A lot of output is not the same thing as the right output. If I am not paying attention, I can spend a whole morning feeling good about what "we" got done, without having asked whether any of it mattered most.
 
-I used to end a day with that solid feeling of "I did three things." Each of those three things was something I'd done with my own hands — I could feel the texture of it, I got feedback as I went, there was something to show. Now I hand those same three things to my agents and half an hour later they're done, and the quality is honestly fine. Then it's my turn to decide what's next, and I keep finding the same thing: **I don't know.**
+So my job has shifted. It is less about doing the work myself, and more about deciding what work should happen next, in what order, and why.
 
-It's not that I don't know *how* to do the next thing. It's that I don't know **what the next thing should be, why it matters, or what it means when it's done.**
+That sounds obvious written down. In practice it is harder than before. When I was slower at execution, prioritization happened naturally, because I could only do one thing at a time, and I had to pick carefully. Now I can start ten things in parallel. The cost of starting something is close to zero, which means the cost of starting the wrong thing is also close to zero, and the savings from picking right are proportionally larger.
 
-Before, this gap was less visible, because execution itself was slow. I'd think while I worked. Halfway through, I'd vaguely decide "it's probably in this direction," and that vague decision would become the answer. The slowness of execution was doing some of the thinking for me — or, more honestly, the slowness was hiding the fact that I hadn't really thought it through.
+I try to hold myself to a simple test. Before I give an agent a task, I ask whether I would still want this task done if doing it took me a full afternoon. If the answer is no, the task probably should not be queued at all, even if the agent would happily knock it out in twenty minutes. Agents lower execution cost so much that they invite me to be sloppier about what I ask for. The check is to not be sloppier.
 
-Once agents compress a week of execution into thirty minutes, that cover comes off.
+I have also noticed a pattern in how different people adapt.
 
----
+People who were already strong at execution tend to do well. Agents free up their hours, and those hours get reinvested in higher leverage work: judgment, customer conversations, setting the direction of a week or a quarter. One person starts to feel like a small team.
 
-Something I've noticed: people who use agents split into two groups pretty fast.
+People whose sense of contribution came mostly from working hard and shipping tend to struggle. The shipping still happens, but the agent is doing it. The instinct is to stay close to execution anyway, to review more than is useful, or to specify tasks in more detail than the agent needs. I recognize this instinct because I have it too. It is worth noticing when you are doing it out of habit rather than because it actually improves the output.
 
-The first group was already good at execution. When agents take the execution off their plate, the time that opens up immediately gets filled by higher-leverage work — making calls, setting direction, talking to real people. These people become a little scary. One person used to do one person's work; now one person runs a team.
+The deeper point, I think, is this. Agents should save humans from repetitive work so that humans have room for the work that is genuinely creative. That is the real purpose. If agents only make me more efficient at what I was already doing, then I have underused them. The question I try to keep asking myself is what I would work on if the rote parts of my week no longer existed. My answer keeps getting more ambitious, which I take as a good sign.
 
-The second group built their sense of their own value on *working hard and making things*. When agents take over that layer, there's nothing obvious for them to hold onto. Without noticing it, they start doing one of three things: reviewing agent output endlessly (the output is already fine — the reviewing is because they need to be needed), micromanaging the agent's execution (they don't know what to tell it to do next, so they stay in how-it-does-it), or just waiting — waiting for a clean task to fall from the sky.
-
-The second pattern isn't about being dumb. It's that the thing they used to build their sense of meaning on just got routed around.
-
----
-
-I'm not trying to make the "you must evolve in the age of AI" argument. That argument gets made at every technology turn.
-
-What I want to say is more specific: **agents have stripped out the part of work you could coast through on sheer effort.** What's left is the part you can't coast: figuring out whose problem you're actually solving, judging whether a line of work is worth continuing, picking by taste when both options in front of you are fine.
-
-These things existed before. They were just buried under a lot of execution noise, and if you skipped them, nobody could tell. Now the noise is mostly gone, and whether you've done the thinking or not — the agents can tell.
-
-Here's the question I ask myself most days now: **if I could only give my team of agents one sentence to work from for the next hour, what would I write?**
-
-That question forces me to compress my direction to the precision of one sentence. If I can't compress it, I haven't actually thought it through. That kind of pressure didn't exist before. Before, I could say "this project matters, let's keep pushing on it," and nothing would stop me. You can't push an agent with a vague direction.
-
----
-
-I don't miss the old version of me who could only "work hard on execution." But I have to admit the old me slept better. Each day ended with things done, and done things meant a meaningful day.
-
-Now that's the floor. Things will get done — the agents take care of that. Whether a day is meaningful depends on whether I pointed those things at something worth doing.
-
-This is uncomfortable. Uncomfortable can be useful, though. At the very least, it's shown me something: **most of what I used to think of as thinking was actually executing.**
-
-Agents are a very good mirror.
+Agents are good mirrors. They show you how much of your day was execution, and they ask what you want to do with the room they give back.
