@@ -6,9 +6,6 @@ tags:
 ---
 
 # 05. Process API
-
-*写于 2026-01-28*
-
 What interfaces should the OS present for process creation and control?
 
 ## fork()

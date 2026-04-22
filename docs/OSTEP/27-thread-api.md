@@ -7,9 +7,6 @@ tags:
 ---
 
 # 27. Thread API
-
-*写于 2026-01-11*
-
 这一章解决的问题是，如何创建和控制 threads.
 
 ## pthread_create

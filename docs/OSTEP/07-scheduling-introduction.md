@@ -7,9 +7,6 @@ tags:
 ---
 
 # 07. Scheduling: Introduction
-
-*写于 2026-02-09*
-
 ## Scheduling Metrics
 
 有两种指标：

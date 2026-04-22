@@ -7,9 +7,6 @@ tags:
 ---
 
 # 32. Common Concurrency Problems
-
-*写于 2026-01-20*
-
 常见并发问题有哪些？如何避免？
 
 ## 非死锁的缺陷

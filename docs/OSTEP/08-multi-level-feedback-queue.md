@@ -7,9 +7,6 @@ tags:
 ---
 
 # 08. Scheduling The Multi-Level Feedback Queue
-
-*写于 2026-02-09*
-
 总体来说，人们对进程是一无所知的，不知道任务有哪些，也不知道任务时间的长短。没有完备的知识如何调度？
 
 这章介绍一种著名的调度方法：Multi-Level Feedback Queue

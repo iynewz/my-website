@@ -7,9 +7,6 @@ tags:
 ---
 
 # 28. Homework
-
-*写于 2026-01-18*
-
 [README](https://github.com/remzi-arpacidusseau/ostep-homework/blob/master/threads-locks/README.md)
 
 ## Question 1
