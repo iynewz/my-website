@@ -6,3 +6,22 @@
   font-style: italic;
   opacity: 0.75;
 }
+
+/* Blog index: subtle date next to post title */
+.post-date {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7em;
+  font-weight: normal;
+  opacity: 0.6;
+  margin-left: 0.4em;
+}
+
+/* Blog index: tighter spacing between post entries */
+.md-content article > h3 {
+  margin-top: 1.6em;
+  margin-bottom: 0.3em;
+}
+.md-content article > h3 + p {
+  margin-top: 0;
+  color: var(--md-default-fg-color--light);
+}
