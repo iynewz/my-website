@@ -443,3 +443,39 @@ hr,
   font-size: 2.4em;
   margin-top: 0.5em;
 }
+
+/* ---- Mobile drawer nav (when top tabs collapse to hamburger) ---- */
+.md-nav--primary .md-nav__title,
+.md-nav--secondary .md-nav__title {
+  background: var(--kami-parchment);
+  color: var(--kami-near-black);
+  font-family: var(--kami-serif);
+  font-weight: 500;
+  box-shadow: none;
+  border-bottom: 1px solid var(--kami-border-cream);
+}
+
+.md-nav--primary {
+  background: var(--kami-parchment);
+}
+
+.md-nav--primary .md-nav__link,
+.md-nav--secondary .md-nav__link {
+  font-family: var(--kami-serif);
+  color: var(--kami-charcoal);
+}
+
+/* Mobile: search dialog also matches theme */
+[data-md-toggle="search"]:checked ~ .md-header .md-search__inner,
+.md-search__inner {
+  background: var(--kami-parchment);
+}
+
+/* Mobile: ensure the body bg flows under the sticky header */
+@media (max-width: 76.1875em) {
+  .md-main,
+  .md-main__inner,
+  .md-content {
+    background: var(--kami-parchment);
+  }
+}
