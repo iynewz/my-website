@@ -297,3 +297,73 @@ There are no automated tests in this project. Testing is done by:
 - [Material for MkDocs Reference](https://squidfunk.github.io/mkdocs-material/reference/) (similar syntax)
 - [Feishu Open API Docs](https://open.feishu.cn/document/home/index)
 - [Giscus Configuration](https://giscus.app/)
+
+---
+
+# Agent SOP (read this first)
+
+This section is the **entry checklist for any agent or future session working on this repo**. @huxijin added this on 2026-04-22 after a round of sloppy PRs. Read it before you touch anything.
+
+## The mistake this SOP exists to prevent
+
+On 2026-04-22, Claude opened four PRs in parallel (#11/#12/#13/#14) without re-syncing main between them. Two failures:
+
+1. **PR #14 (new blog) also edited `zensical.toml` nav** to add the post for local preview. PR #12 (nav restructure) was still open. When PRs merged in different order than opened, git silently kept a stale nav version, briefly dropping the Archive restructure.
+2. **`agent-raises-the-bar.md` was added as a file but never made it into main's nav**, because every subsequent PR was branched off a main that didn't have it yet. The post deployed but was invisible in navigation.
+
+Both failures came from the same habit: opening branches without pulling main, and editing files outside the PR's stated scope.
+
+## Before opening any PR
+
+```bash
+git checkout main
+git pull --ff-only
+git checkout -b your-branch-name
+```
+
+If a previous PR is still in review and yours depends on it, **wait for it to merge**. If you must work in parallel, after the first merges:
+
+```bash
+git fetch origin main
+git rebase origin/main
+git push --force-with-lease
+```
+
+## Scope discipline
+
+A PR touches **only files necessary for its stated purpose.** If you need an unrelated change for local preview, do it on a throwaway local-only branch (e.g. `preview-all`) and **never push that as a PR**.
+
+Specifically:
+- A new blog post PR touches `docs/blogs/<post>.md` only. Do **not** edit `zensical.toml` in the same PR.
+- Adding a post to nav is a separate, tiny PR — or skip it, and rely on `scripts/gen_blog_index.py` to surface the post via the `/blogs/` index.
+
+## Per-PR checklist
+
+Before pushing:
+- [ ] Branched from latest `origin/main`, or rebased onto it
+- [ ] `git diff origin/main..HEAD --stat` shows only files in the PR's stated scope
+- [ ] `python3 scripts/gen_blog_index.py` runs cleanly if blog posts changed
+- [ ] `.venv/bin/zensical build` succeeds locally
+- [ ] PR title and body honestly describe the diff
+
+After merging, verify the deploy:
+- [ ] Wait ~60s for GitHub Actions (`gh run list --limit 3`)
+- [ ] `curl -sI https://iynewz.dev/<new-path>/` returns 200
+- [ ] `curl -s https://iynewz.dev/ | grep <title-or-slug>` confirms nav/link is visible
+
+## Writing voice (when drafting copy)
+
+- Reference posts: `docs/blogs/ai-thinking.md`, `docs/blogs/self-awareness.md`, `docs/now.md`. Read those before drafting.
+- English: no em-dashes. No AI-jargon ("leverage", "paradigm", "synergy", "unlock"). Periods go outside closing quotes.
+- Don't make huxijin sound uncertain or unprofessional. Reframe "I don't know what to do" kinds of observations into considered choices ("I prioritize more carefully").
+- Shorter, plainer, fewer adjectives.
+
+## Owner framings (don't drift from these)
+
+- Site positions huxijin as interested in **AI, small teams working with agents, what stays human when execution gets cheap** — not as a student doing CSAPP/OSTEP exercises.
+- Currently learning drums. He frames this as "a blessing to learn a new field where the curse of knowledge doesn't apply."
+- Not every page should mention Slock. Slock belongs on `/now` and briefly on the homepage; blog posts should stand on their own.
+
+## When in doubt
+
+DM @huxijin and ask before pushing. Better to slow down than to ship a sloppy diff.

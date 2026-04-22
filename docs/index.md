@@ -2,8 +2,10 @@
 icon: lucide/rocket
 ---
 
-# Hi, I’m iynewz! 👋
+# Hi, I'm iynewz 👋
 
-Exploring C++ & system programming through experiments, tutorials, and projects.  
+Interested in AI, how small teams work with agents, and what stays human when execution gets cheap.
 
-记录我的学习旅程，也偶尔分享一些生活和思考 ✨  
+Right now I'm learning drums and working on growth at [Slock](https://slock.ai). [More on what I'm up to](now.md).
+
+记录我的思考，偶尔分享生活 ✨

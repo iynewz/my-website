@@ -46,6 +46,8 @@ jobs:
       - name: Inject GA ID
         run: |
           sed -i "s|\${GA_MEASUREMENT_ID}|${{ secrets.GA_MEASUREMENT_ID }}|g" zensical.toml
+      - name: Generate blog index
+        run: python scripts/gen_blog_index.py
       - name: Build Zensical site
         run: |
           zensical build --clean
