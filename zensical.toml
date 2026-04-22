@@ -51,6 +51,7 @@ nav = [
   {"Home" = "index.md"},
   {"Now" = "now.md"},
   {"Blogs" = [
+     "blogs/index.md",
      "blogs/how-to-make-growth.md",
      "blogs/ai-thinking.md",
      "blogs/self-awareness.md",
