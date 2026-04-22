@@ -1,4 +1,5 @@
 ---
+date: 2026-03-29
 comments: true
 tags:
   - 笔记
@@ -6,6 +7,8 @@ tags:
 ---
 
 # AI 时代怎么做增长
+
+*写于 2026-03-29*
 
 > 本文档整理自 [AI Odyssey 播客第 74 期](https://www.xiaoyuzhoufm.com/episode/69bac706690ca3160f3bac09)，并补充了相关工具、平台的背景信息。自己听了觉得很有收获，Manus 和我一起合作，整理了一下信息。
 

@@ -1,4 +1,5 @@
 ---
+date: 2026-02-20
 tags:
   - OSTEP
   - Scheduling
@@ -6,6 +7,8 @@ tags:
 ---
 
 # 10. Multiprocessor Scheduling (Advanced)
+
+*写于 2026-02-20*
 
 前一章介绍的 Lottery scheduling 和 Stride scheduling 原始设计是为了单处理器服务的。在多核 CPU 上，如何调度？
 单核和多核最大的区别是，对缓存和内存的使用。多核 CPU 系统中，每个核通常有自己的 L1/L2 缓存，同时可能有共享的 L3 缓存。

@@ -1,10 +1,13 @@
 ---
+date: 2026-01-28
 tags:
   - OSTEP
   - Process 
 ---
 
 # 04. The Abstraction: The Process
+
+*写于 2026-01-28*
 
 OS 提供了一种 illusion，那就是有无数的 CPU 可以用。
 

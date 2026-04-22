@@ -1,4 +1,5 @@
 ---
+date: 2026-01-11
 tags:
   - OSTEP
   - Thread
@@ -6,6 +7,8 @@ tags:
 ---
 
 # 26. Concurrency and Threads
+
+*写于 2026-01-11*
 
 在单线程程序模型中，一个程序在任意时刻只有一个执行点，也只有一个 Program Counter，CPU 从该 PC 指向的位置取指并顺序执行。
 

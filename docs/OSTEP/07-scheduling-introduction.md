@@ -1,4 +1,5 @@
 ---
+date: 2026-02-09
 tags:
   - OSTEP
   - Scheduling 
@@ -6,6 +7,8 @@ tags:
 ---
 
 # 07. Scheduling: Introduction
+
+*写于 2026-02-09*
 
 ## Scheduling Metrics
 

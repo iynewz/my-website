@@ -1,4 +1,5 @@
 ---
+date: 2026-01-11
 comments: true
 tags:
   - OSTEP
@@ -6,6 +7,8 @@ tags:
 ---
 
 # 27. Homework
+
+*写于 2026-01-11*
 
 [README](https://github.com/remzi-arpacidusseau/ostep-homework/blob/master/threads-api/README.md)
 

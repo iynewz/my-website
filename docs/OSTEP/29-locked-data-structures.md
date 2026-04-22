@@ -1,10 +1,13 @@
 ---
+date: 2026-01-28
 tags:
   - OSTEP
   - Locks
   - Concurrency
 ---
 # 32. Locked Data Structures
+
+*写于 2026-01-28*
 
 在并发程序中，如何在保证正确性的前提下，尽可能提高并发性能？
 

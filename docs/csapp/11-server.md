@@ -1,10 +1,13 @@
 ---
+date: 2025-12-06
 tags:
   - CSAPP
   - Network
 ---
 
 # Tiny server
+
+*写于 2025-12-06*
 
 ## TODO
 * [x] 最小的 webserver: nc-l
