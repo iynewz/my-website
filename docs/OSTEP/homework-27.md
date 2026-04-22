@@ -1,4 +1,5 @@
 ---
+date: 2026-01-11
 comments: true
 tags:
   - OSTEP
@@ -6,7 +7,6 @@ tags:
 ---
 
 # 27. Homework
-
 [README](https://github.com/remzi-arpacidusseau/ostep-homework/blob/master/threads-api/README.md)
 
 Valgrind 是一个运行时工具。它在自己的执行引擎下运行程序，并允许不同的工具检查程序的内存使用、线程行为以及性能。

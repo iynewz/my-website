@@ -1,0 +1,21 @@
+{% include "partials/actions.html" %}
+{% if "<h1" not in page.content %}
+  <h1 id="__skip">{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+{{ page.content }}
+{% if page.meta and page.meta.date %}
+  {% set _date = page.meta.date.strftime('%Y-%m-%d') if page.meta.date.strftime is defined else page.meta.date %}
+  <p class="page-date" data-date="{{ _date }}">写于 {{ _date }}</p>
+  <script>
+    (function(){
+      var el = document.currentScript.previousElementSibling;
+      var article = el.closest('article') || document;
+      var h1 = article.querySelector('h1');
+      if (h1 && el) { h1.insertAdjacentElement('afterend', el); }
+    })();
+  </script>
+{% endif %}
+{% include "partials/tags.html" %}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}

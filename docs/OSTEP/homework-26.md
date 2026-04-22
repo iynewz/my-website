@@ -1,4 +1,5 @@
 ---
+date: 2026-01-11
 comments: true
 tags:
   - OSTEP
@@ -7,7 +8,6 @@ tags:
 ---
 
 # 26. Homework
-
 ## Readme
 
 在开始作业之前，一定要读官方仓库中的说明：https://github.com/remzi-arpacidusseau/ostep-homework/tree/master/threads-intro

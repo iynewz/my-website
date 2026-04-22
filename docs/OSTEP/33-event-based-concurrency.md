@@ -1,4 +1,5 @@
 ---
+date: 2026-01-25
 tags:
   - OSTEP
   - Locks
@@ -6,7 +7,6 @@ tags:
 ---
 
 # 33. Event-based Concurrency (Advanced)
-
 并发不一定要通过多线程来实现。还有一种模式是 event-based concurrency （事件驱动并发）。现代的 server-side 框架 Node.js 就使用了这种模式。
 
 基于事件的并发系统，和基于线程的并发系统，有哪些不同？

@@ -1,4 +1,5 @@
 ---
+date: 2026-02-20
 tags:
   - OSTEP
   - Scheduling
@@ -6,7 +7,6 @@ tags:
 ---
 
 # 09. Scheduling: Proportional Share 
-
 一个理想的公平调度应该长什么样？调度程序的最终目标，是确保每个工作获得一定比例的 CPU 时间，而不是优化周转时间和响应时间。
 
 ## **Lottery scheduling**

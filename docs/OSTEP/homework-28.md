@@ -1,4 +1,5 @@
 ---
+date: 2026-01-18
 comments: true
 tags:
   - OSTEP
@@ -6,7 +7,6 @@ tags:
 ---
 
 # 28. Homework
-
 [README](https://github.com/remzi-arpacidusseau/ostep-homework/blob/master/threads-locks/README.md)
 
 ## Question 1

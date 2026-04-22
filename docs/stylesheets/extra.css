@@ -1,0 +1,8 @@
+.page-date {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85em;
+  margin-top: -0.6em;
+  margin-bottom: 1.5em;
+  font-style: italic;
+  opacity: 0.75;
+}

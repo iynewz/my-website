@@ -1,11 +1,11 @@
 ---
+date: 2025-12-06
 tags:
   - CSAPP
   - Network
 ---
 
 # Tiny server
-
 ## TODO
 * [x] 最小的 webserver: nc-l
 * [ ] 一步步进化为生产可以用的就难了。难的是并发、动态内容、c-10k、c-100k

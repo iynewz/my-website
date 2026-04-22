@@ -1,11 +1,11 @@
 ---
+date: 2026-01-28
 tags:
   - OSTEP
   - Process 
 ---
 
 # 04. The Abstraction: The Process
-
 OS 提供了一种 illusion，那就是有无数的 CPU 可以用。
 
 ## Virtualizing

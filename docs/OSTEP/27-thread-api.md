@@ -1,4 +1,5 @@
 ---
+date: 2026-01-11
 tags:
   - OSTEP
   - Thread
@@ -6,7 +7,6 @@ tags:
 ---
 
 # 27. Thread API
-
 这一章解决的问题是，如何创建和控制 threads.
 
 ## pthread_create

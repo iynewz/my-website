@@ -1,11 +1,11 @@
 ---
+date: 2026-01-28
 tags:
   - OSTEP
   - Process 
 ---
 
 # 05. Process API
-
 What interfaces should the OS present for process creation and control?
 
 ## fork()

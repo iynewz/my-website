@@ -1,4 +1,5 @@
 ---
+date: 2026-03-29
 comments: true
 tags:
   - 笔记
@@ -6,7 +7,6 @@ tags:
 ---
 
 # AI 时代怎么做增长
-
 > 本文档整理自 [AI Odyssey 播客第 74 期](https://www.xiaoyuzhoufm.com/episode/69bac706690ca3160f3bac09)，并补充了相关工具、平台的背景信息。自己听了觉得很有收获，Manus 和我一起合作，整理了一下信息。
 
 > 嘉宾：宗源（X: @jaredliu_bravo）是 YouMind 的增长工程师。近半年，他操盘了 2 次 Product Hunt 打榜（日榜第一、年榜第六），并在近三个月内拿到了全站 50% 以上的流量。YouMind 是一个 AI 学习和创作平台，由前语雀创始人玉伯创立。
