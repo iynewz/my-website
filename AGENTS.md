@@ -367,3 +367,20 @@ After merging, verify the deploy:
 ## When in doubt
 
 DM @huxijin and ask before pushing. Better to slow down than to ship a sloppy diff.
+
+## Design lessons (added 2026-04-22 after theme iteration)
+
+### Typography unity beats typography variety
+A page reading with "8–9 font sizes at once" feels broken. Two fonts (serif + sans) mixed across body/nav/breadcrumb also reads as noise, even if each part is individually tasteful. When in doubt, collapse the scale. Current theme uses one font family everywhere (Newsreader serif) except the search input. Font sizes: H1 (1.9em), H2 (1.35em), H3 (1.1em), body (1rem), tabs (0.95rem), sidebar (0.88rem), breadcrumb/date (0.85rem). That's 7 levels — the ceiling.
+
+### Warm backgrounds have to look warm, not green
+Beige/parchment colors are warm only if the R and G channels aren't too close. `#f5f4ed` tipped green on some monitors — R 245 / G 244 / B 237 left only 7–8 point gaps, which macOS displays can read as olive. `#fbfaf7` (current) keeps a 4-point warm gap and reads cleanly. Before shipping a warm color, check on at least one non-Retina display.
+
+### Dark mode links must re-check contrast
+Ink blue `#1B365D` is gorgeous on parchment and invisible on deep-dark `#141413`. Every accent color needs a dark-mode equivalent. Current: light warm blue `#a9c7f0` for dark-mode links.
+
+### Mobile uses the same CSS — verify it anyway
+Zero `@media` queries means the theme auto-applies to phones. But Material collapses the top tabs into a hamburger drawer on narrow viewports, and Material's default drawer styling ignores body-level rules. Explicitly style `.md-nav--primary` and `.md-nav--secondary` to match. Also make sure `.md-main`/`.md-content` background flows correctly under the sticky header at mobile widths.
+
+### Design iteration pattern
+When the owner shares a reference site (like tw93/Kami), pull the design.md spec, not just screenshots. Real values (exact hex, font weights, line-heights, size scale) are better than "vibes recreation." Kami's spec at `references/design.en.md` is the source of truth.
