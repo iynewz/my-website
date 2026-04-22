@@ -11,9 +11,9 @@
   --kami-brand-light: #2D5A8A;
 
   /* Surface (warm neutrals only — no cool blue-grays) */
-  --kami-parchment: #f5f4ed;
-  --kami-ivory: #faf9f5;
-  --kami-warm-sand: #e8e6dc;
+  --kami-parchment: #faf7f0;
+  --kami-ivory: #fffcf6;
+  --kami-warm-sand: #efe9db;
 
   /* Text */
   --kami-near-black: #141413;
@@ -73,7 +73,32 @@
   --md-default-bg-color: var(--kami-parchment);
   --md-default-fg-color: var(--kami-near-black);
   --md-typeset-color: var(--kami-near-black);
+  --md-typeset-a-color: var(--kami-dark-link);
   --md-code-bg-color: var(--kami-ivory);
+  --md-accent-fg-color: var(--kami-dark-link);
+  --md-accent-fg-color--transparent: rgba(169, 199, 240, 0.15);
+}
+
+/* Dark-mode link color: light, slightly warm blue so links are readable on dark bg */
+[data-md-color-scheme="slate"] {
+  --kami-dark-link: #a9c7f0;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: var(--kami-dark-link);
+  border-bottom-color: rgba(169, 199, 240, 0.35);
+}
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #c9dcf7;
+  border-bottom-color: #c9dcf7;
+}
+[data-md-color-scheme="slate"] .md-tabs__link--active,
+[data-md-color-scheme="slate"] .md-tabs__link:hover,
+[data-md-color-scheme="slate"] .md-nav__link:hover,
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-content article > h3 a:hover,
+[data-md-color-scheme="slate"] .md-social a:hover {
+  color: var(--kami-dark-link);
 }
 
 /* ---- Typography ---- */
